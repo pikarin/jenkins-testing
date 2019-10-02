@@ -9,7 +9,7 @@ node {
         sh "echo $JENKINS_HOME"
         sh "echo $WORKSPACE"
         
-        dh "rm test-build.tar.gz"
+        sh "rm test-build.tar.gz"
         
         dir("${JENKINS_HOME}/workspace") {
             sh "tar -czvf test-build.tar.gz adit.test --exclude=adit.test/.DS_Store --exclude=adit.test/*.git* --exclude=adit.test/node_modules"
