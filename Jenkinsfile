@@ -18,9 +18,10 @@ node {
     }
     
     stage('Deploy') {
-        sshPublisher(publishers: [sshPublisherDesc(configName: 'holahalo-dev', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''tar -xzvf test-build.tar.gz
+        sshPublisher(publishers: [sshPublisherDesc(configName: 'holahalo-dev', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''cd /home/holadev/sites/testing
+tar -xzvf test-build.tar.gz
 
-        mv adit.test adit.test$BUILD_ID
-        ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'testing', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'test-build.tar.gz')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+mv adit.test adit.test$BUILD_ID
+''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'testing', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'test-build.tar.gz')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
     }
 }
