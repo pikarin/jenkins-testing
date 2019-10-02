@@ -8,7 +8,7 @@ node {
     stage('Package') {
         sh "echo $JENKINS_HOME"
         sh "echo $WORKSPACE"
-        sh "which phpcs"
+        sh "phpcs --version"
         
         sh "rm test-build.tar.gz --force"
         
