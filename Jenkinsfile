@@ -28,7 +28,7 @@ node {
 
         cd ..
 
-        mv dev.holahalo dev.holahalo$BUILD_ID
-        ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/home/holadev/testing', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'dev.holahalo-build.tar.gz')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+        mv adit.test adit.test$BUILD_ID
+        ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/home/holadev/testing', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'test-build.tar.gz')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
     }
 }
