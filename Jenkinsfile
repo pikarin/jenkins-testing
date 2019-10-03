@@ -25,7 +25,7 @@ node {
         
         rm test-build.tar.gz --force
 
-        mv $JOB_NAME $JOB_NAME$GIT_COMMIT-$BUILD_ID
+        mv $JOB_NAME $JOB_NAME-$BUILD_ID
         ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'testing', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'test-build.tar.gz')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
     }
 }
